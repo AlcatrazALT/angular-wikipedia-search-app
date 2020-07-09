@@ -1,30 +1,29 @@
-<div>
-    <table>
-        <thead>
-            <tr>
-                <th>PageId</th>
-                <th>Title</th>
-                <th>Snippet</th>
-                <th>Timestamp</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let page of wikiPages | slice:0:5">
-                <td>
-                    {{ page.pageid }}
-                </td>
-                <td>
-                    <a target="_blank" [href]="'https://en.wikipedia.org?curid=' + page.pageid">
+<table>
+    <thead>
+        <tr>
+            <th>PageId</th>
+            <th>Title</th>
+            <th>Snippet</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let page of wikiPages | paginate: { itemsPerPage: 10, currentPage: pageActual }">
+            <td>
+                {{ page.pageid }}
+            </td>
+            <td>
+                <a target=" _blank " [href]=" 'https://en.wikipedia.org?curid=' + page.pageid ">
                         {{ page.title }}
                     </a>
-                </td>
-                <td [innerHTML]="page.snippet">
+            </td>
+            <td [innerHTML]="page.snippet ">
 
-                </td>
-                <td>
-                    {{ page.timestamp }}
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            </td>
+            <td>
+                {{ page.timestamp }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls class="pagination" (pageChange)="pageActual= $event"></pagination-controls>

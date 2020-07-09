@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { PageResultListComponent } from './page-result-list/page-result-list.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { from } from 'rxjs';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { from } from 'rxjs';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

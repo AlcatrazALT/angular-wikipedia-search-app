@@ -1,22 +1,24 @@
 table {
     font-family: "Lucida Sans Unicode";
-    color: #669;
     font-size: 14px;
     border-collapse: collapse;
 }
 
 th {
     font-weight: normal;
-    color: #039;
     padding: 10px 15px;
 }
 
 td {
-    color: #669;
     border-top: 1px solid #e8edff;
     padding: 10px 15px;
 }
 
 tr:hover td {
     background: #e8edff;
+}
+
+.pagination {
+    font-family: "Lucida Sans Unicode";
+    font-size: 14px;
 }

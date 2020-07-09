@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PageResultListComponent implements OnInit {
 
   @Input() wikiPages = [];
+  pageActual: number = 1;
+
   constructor() { }
 
   ngOnInit(): void {

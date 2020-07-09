@@ -1,7 +1,8 @@
-<div class="box">
-    <form>
-        <input placeholder="Search in Wiki" class="input" (input)="searchLine = $event.target.value">
-        <button (click)="onFormSubmit($event)">Click</button>
-    </form>
-
+<div class="container">
+    <div class="searchBox">
+        <form>
+            <input placeholder="Search in Wiki" class="input" (input)="searchLine = $event.target.value">
+            <button class="button" (click)="onFormSubmit($event)"><span>Start</span></button>
+        </form>
+    </div>
 </div>

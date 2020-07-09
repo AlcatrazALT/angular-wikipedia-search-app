@@ -1,0 +1,28 @@
+<table class="table is-striped">
+    <thead>
+        <tr>
+            <th>PageId</th>
+            <th>Title</th>
+            <th>Snippet</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let page of wikiPages">
+            <td>
+                {{ page.pageid }}
+            </td>
+            <td>
+                <a target="_blank" [href]="'https://en.wikipedia.org?curid=' + page.pageid">
+                    {{ page.title }}
+                </a>
+            </td>
+            <td [innerHTML]="page.snippet">
+
+            </td>
+            <td>
+                {{ page.timestamp }}
+            </td>
+        </tr>
+    </tbody>
+</table>
